@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/download.jpg" type="image/x-icon">
+    <title>Toca da raposa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Toca da raposa!</h1>
+        <nav>
+            <button id="cart-button">Carrinho (<span id="cart-count">0</span>)</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="menu">
+            <h2>Nossos Hambúrgueres</h2>
+            <div class="hamburguer-item" data-id="1" data-name="Clássico" data-price="15.00">
+                <img src="img/classico.jpg" alt="Hambúrguer Clássico">
+                <h3>Clássico</h3>
+                <p>O sabor tradicional que você conhece e ama.</p>
+                <p class="price">R$15,00</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="hamburguer-item" data-id="2" data-name="Cheddar" data-price="18.00">
+                <img src="img/cheddar.jpg" alt="Hambúrguer Cheddar">
+                <h3>Cheddar</h3>
+                <p>Hambúrguer suculento com queijo cheddar derretido.</p>
+                <p class="price">R$18,00</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="hamburguer-item" data-id="3" data-name="Bacon" data-price="20.00">
+                <img src="img/download.jpg" alt="Hambúrguer Bacon">
+                <h3>Bacon</h3>
+                <p>Delicioso hambúrguer com fatias crocantes de bacon.</p>
+                <p class="price">R$20,00</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Carrinho -->
+    <div id="cart-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Seu Carrinho</h2>
+            <div id="cart-items">
+                <!-- Itens do carrinho serão adicionados aqui -->
+            </div>
+            <div class="cart-summary">
+                <p>Total: R$<span id="cart-total">0.00</span></p>
+                <button id="checkout-button">Finalizar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulário de Pedido -->
+    <div id="checkout-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Finalizar Pedido</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="observacoes">Observações:</label>
+                    <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+                </div>
+
+                <button type="submit">Enviar Pedido</button>
+            </form>
+            <div id="order-confirmation" class="hidden">
+                <h2>Pedido Confirmado!</h2>
+                <p>Obrigado por seu pedido, <span id="clienteNome"></span>!</p>
+                <p>Seu pedido está a caminho.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Desenvolvido por Ronaldo silva dos santos</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
