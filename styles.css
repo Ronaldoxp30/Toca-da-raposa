@@ -384,3 +384,7 @@ button[type="submit"]:hover {
         text-align: left;
     }
 }
+h2{
+    text-align: center;
+    color: green;
+}
