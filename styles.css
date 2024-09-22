@@ -65,7 +65,7 @@ main {
     margin-bottom: 40px;
 }
 
-.menu h2 {
+.menu h1 {
     text-align: center;
     margin-bottom: 20px;
     color: var(--primary-color);
@@ -278,7 +278,7 @@ form {
     border-radius: 12px;
 }
 
-form h2 {
+form h1 {
     margin-bottom: 20px;
     color: var(--primary-color);
     text-align: center;
